@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.18
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15453756, g: 0.15826738, b: 0.14749351, a: 0.18}
+  m_IndirectSpecularColor: {r: 0.15453756, g: 0.15826735, b: 0.14749345, a: 0.18}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -47,8 +47,8 @@ LightmapSettings:
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
-    m_IndirectOutputScale: 5
-    m_AlbedoBoost: 6.8
+    m_IndirectOutputScale: 2.16
+    m_AlbedoBoost: 4.65
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
