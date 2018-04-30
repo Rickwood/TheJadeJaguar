@@ -289,6 +289,7 @@
     <Compile Include="Assets\Scripts\enemyPathing.cs" />
     <Compile Include="Assets\Scripts\FirstPersonCharacterController.cs" />
     <Compile Include="Assets\Scripts\LineSight.cs" />
+    <Compile Include="Assets\Scripts\turnOffFlashlight.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\StylizedWoodVol01\Shaders\StandardTesselated.shader" />
