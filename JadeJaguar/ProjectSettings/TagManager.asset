@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Painting
   - Flashlight
+=======
+  - painting
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
