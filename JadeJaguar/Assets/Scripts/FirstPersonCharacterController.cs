@@ -5,6 +5,11 @@ using UnityEngine;
 public class FirstPersonCharacterController : MonoBehaviour {
 
     public float speed;
+
+    private float moneyCollected = 0f;
+    private bool canPickUp = false;
+    private GameObject painting;
+
 	// Use this for initialization
 	void Start () {
         speed = 4.0f;
@@ -22,5 +27,29 @@ public class FirstPersonCharacterController : MonoBehaviour {
 
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
-	}
+
+        if (canPickUp == true)
+        {
+            if (Input.GetKeyDown("e"))
+            {
+                painting.SetActive(false);
+                moneyCollected = moneyCollected + 100f;
+            }
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Painting"))
+        {
+            canPickUp = true;
+            painting = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Painting"))
+            canPickUp = false;
+    }
 }

@@ -2897,9 +2897,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 739602133}
+  - component: {fileID: 739602134}
   m_Layer: 0
   m_Name: SuccessKidPainting
-  m_TagString: Untagged
+  m_TagString: Painting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2919,6 +2920,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &739602134
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739602132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &749529529
 GameObject:
   m_ObjectHideFlags: 0
@@ -5722,9 +5735,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1524636513}
+  - component: {fileID: 1524636514}
   m_Layer: 0
   m_Name: SuccessKidPainting (2)
-  m_TagString: Untagged
+  m_TagString: Painting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5744,6 +5758,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1524636514
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1524636512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1536552716
 GameObject:
   m_ObjectHideFlags: 0
@@ -6298,9 +6324,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1659171814}
+  - component: {fileID: 1659171815}
   m_Layer: 0
   m_Name: SuccessKidPainting (1)
-  m_TagString: Untagged
+  m_TagString: Painting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6320,6 +6347,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1659171815
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659171813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1662507375
 GameObject:
   m_ObjectHideFlags: 0
@@ -7113,9 +7152,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1912034153}
+  - component: {fileID: 1912034154}
   m_Layer: 0
   m_Name: FryPainting
-  m_TagString: Untagged
+  m_TagString: Painting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7135,6 +7175,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1912034154
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1912034152}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1913922955
 GameObject:
   m_ObjectHideFlags: 0
