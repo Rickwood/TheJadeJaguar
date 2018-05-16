@@ -68,7 +68,7 @@ public class LineSight : MonoBehaviour {
         
         if(CanSeeTarget)
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene(3);
             LastKnowSighting = Target.position;
         }
     }

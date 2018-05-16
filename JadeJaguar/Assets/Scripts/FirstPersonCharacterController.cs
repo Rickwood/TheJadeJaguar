@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirstPersonCharacterController : MonoBehaviour {
 
@@ -14,7 +15,7 @@ public class FirstPersonCharacterController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        speed = 3.0f;
+        speed = 4.0f;
         Cursor.lockState = CursorLockMode.Locked;
 	}
 	
@@ -30,7 +31,7 @@ public class FirstPersonCharacterController : MonoBehaviour {
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
 
-        if (itemsCollected < 10)
+        if (itemsCollected < 5)
         {
             if (canPickUp == true && Input.GetKey("e"))
             {
@@ -54,7 +55,9 @@ public class FirstPersonCharacterController : MonoBehaviour {
         {
             canPickUp = true;
             painting = other.gameObject;
-        }
+		}else if(other.gameObject.CompareTag("EXIT")){
+			SceneManager.LoadScene (2); //scene 2 is the victory screen
+		}
     }
 
     private void OnTriggerExit(Collider other)
