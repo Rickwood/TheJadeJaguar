@@ -6,6 +6,7 @@ public class FirstPersonCharacterController : MonoBehaviour {
 
     public float speed;
 
+    private float itemsCollected = 0f;
     private float pressedTimer = 0f;
     private float moneyCollected = 0f;
     private bool canPickUp = false;
@@ -29,18 +30,22 @@ public class FirstPersonCharacterController : MonoBehaviour {
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
 
-        if (canPickUp == true && Input.GetKey("e"))
+        if (itemsCollected < 10)
         {
-            pressedTimer += Time.deltaTime;
-
-            if (pressedTimer >= 3)
+            if (canPickUp == true && Input.GetKey("e"))
             {
-                painting.SetActive(false);
-                moneyCollected = moneyCollected + 100f;
+                pressedTimer += Time.deltaTime;
+
+                if (pressedTimer >= 3)
+                {
+                    painting.SetActive(false);
+                    moneyCollected = moneyCollected + 100f;
+                    itemsCollected++;
+                }
             }
+            else
+                pressedTimer = 0f;
         }
-        else
-            pressedTimer = 0f;
     }
 
     void OnTriggerEnter(Collider other)
