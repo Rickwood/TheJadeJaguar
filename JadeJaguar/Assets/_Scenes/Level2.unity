@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.18
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15453756, g: 0.15826735, b: 0.14749345, a: 0.18}
+  m_IndirectSpecularColor: {r: 0.15453756, g: 0.15826738, b: 0.14749351, a: 0.18}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   - {fileID: 958705627}
   - {fileID: 902615244}
   - {fileID: 389417022}
-  speed: 3
+  speed: 4
 --- !u!54 &200290176
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1114,7 +1114,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 14
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &200290182
 MonoBehaviour:
@@ -1605,7 +1605,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &437282477
 MonoBehaviour:
@@ -2536,7 +2536,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &707390541
 MonoBehaviour:
@@ -3151,7 +3151,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &801090981
 MonoBehaviour:
@@ -5262,7 +5262,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1410150650
 MonoBehaviour:
@@ -7040,7 +7040,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1895896186
 MonoBehaviour:
@@ -7635,7 +7635,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2037749988
 MonoBehaviour:

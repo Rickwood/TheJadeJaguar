@@ -6,13 +6,14 @@ public class FirstPersonCharacterController : MonoBehaviour {
 
     public float speed;
 
+    private float pressedTimer = 0f;
     private float moneyCollected = 0f;
     private bool canPickUp = false;
     private GameObject painting;
 
 	// Use this for initialization
 	void Start () {
-        speed = 4.0f;
+        speed = 3.0f;
         Cursor.lockState = CursorLockMode.Locked;
 	}
 	
@@ -28,14 +29,18 @@ public class FirstPersonCharacterController : MonoBehaviour {
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
 
-        if (canPickUp == true)
+        if (canPickUp == true && Input.GetKey("e"))
         {
-            if (Input.GetKeyDown("e"))
+            pressedTimer += Time.deltaTime;
+
+            if (pressedTimer >= 3)
             {
                 painting.SetActive(false);
                 moneyCollected = moneyCollected + 100f;
             }
         }
+        else
+            pressedTimer = 0f;
     }
 
     void OnTriggerEnter(Collider other)
