@@ -291,6 +291,7 @@
     <Compile Include="Assets\Scripts\LineSight.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\turnOffFlashlight.cs" />
+    <Compile Include="Assets\TimerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\StylizedWoodVol01\Shaders\StandardTesselated.shader" />

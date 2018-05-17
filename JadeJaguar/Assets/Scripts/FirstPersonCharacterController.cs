@@ -2,21 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FirstPersonCharacterController : MonoBehaviour {
 
-    public float speed;
+    public Text inventoryText;
+    public Text scoreText;
 
-    public float itemsCollected = 0f;
-    public float pressedTimer = 0f;
+    private float inventoryMax = 8f;
+    private float speed;
+    private float itemsCollected = 0f;
+    private float pressedTimer = 3f;
     private float moneyCollected = 0f;
     private bool canPickUp = false;
     private GameObject painting;
+
+    public Image timerBar;
 
 	// Use this for initialization
 	void Start () {
         speed = 3.0f;
         Cursor.lockState = CursorLockMode.Locked;
+        inventoryText.text = "Inventory: " + itemsCollected + "/" + inventoryMax;
+        scoreText.text = "Dolla's!: $" + moneyCollected;
+        timerBar.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -31,22 +40,30 @@ public class FirstPersonCharacterController : MonoBehaviour {
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
 
-        if (itemsCollected < 5)
+        if (itemsCollected < inventoryMax)
         {
             if (canPickUp == true && Input.GetKey("e"))
             {
-                pressedTimer += Time.deltaTime;
+                timerBar.enabled = true;
+                pressedTimer -= Time.deltaTime;
+                timerBar.fillAmount = pressedTimer / 3;
 
-                if (pressedTimer > 3)
+                if (pressedTimer <= 0)
                 {
                     painting.SetActive(false);
                     canPickUp = false;
+                    timerBar.enabled = false;
                     moneyCollected = moneyCollected + 100f;
                     itemsCollected++;
+                    updateInventory();
+                    updateScore();
                 }
             }
             else
-                pressedTimer = 0f;
+            {
+                timerBar.enabled = false;
+                pressedTimer = 3f;
+            }
         }
     }
 
@@ -66,5 +83,15 @@ public class FirstPersonCharacterController : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Painting"))
             canPickUp = false;
+    }
+
+    void updateInventory()
+    {
+        inventoryText.text = "Inventory: " + itemsCollected + "/" + inventoryMax;
+    }
+
+    void updateScore()
+    {
+        scoreText.text = "Dolla's!: $" + moneyCollected;
     }
 }
