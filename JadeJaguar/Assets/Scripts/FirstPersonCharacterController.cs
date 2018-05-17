@@ -7,15 +7,15 @@ public class FirstPersonCharacterController : MonoBehaviour {
 
     public float speed;
 
-    private float itemsCollected = 0f;
-    private float pressedTimer = 0f;
+    public float itemsCollected = 0f;
+    public float pressedTimer = 0f;
     private float moneyCollected = 0f;
     private bool canPickUp = false;
     private GameObject painting;
 
 	// Use this for initialization
 	void Start () {
-        speed = 4.0f;
+        speed = 3.0f;
         Cursor.lockState = CursorLockMode.Locked;
 	}
 	
@@ -37,9 +37,10 @@ public class FirstPersonCharacterController : MonoBehaviour {
             {
                 pressedTimer += Time.deltaTime;
 
-                if (pressedTimer >= 3)
+                if (pressedTimer > 3)
                 {
                     painting.SetActive(false);
+                    canPickUp = false;
                     moneyCollected = moneyCollected + 100f;
                     itemsCollected++;
                 }
@@ -55,6 +56,7 @@ public class FirstPersonCharacterController : MonoBehaviour {
         {
             canPickUp = true;
             painting = other.gameObject;
+
 		}else if(other.gameObject.CompareTag("EXIT")){
 			SceneManager.LoadScene (2); //scene 2 is the victory screen
 		}
