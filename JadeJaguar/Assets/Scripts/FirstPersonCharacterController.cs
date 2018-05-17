@@ -18,6 +18,7 @@ public class FirstPersonCharacterController : MonoBehaviour {
     private GameObject painting;
 
     public Image timerBar;
+    public new AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
@@ -50,6 +51,7 @@ public class FirstPersonCharacterController : MonoBehaviour {
 
                 if (pressedTimer <= 0)
                 {
+                    audio.Play();
                     painting.SetActive(false);
                     canPickUp = false;
                     timerBar.enabled = false;
